@@ -13,6 +13,17 @@ $color-transparent:                 rgba(255, 255, 255, 0);
 $color-neon-blue:                   #2c39f2;
 $color-torch-red:                   #ff1553;
 
+$color-ghost-white:                 #f8f9fC;
+$color-crimson:                     #d10a42;
+$color-torch-red:                   #ed0233;
+$color-egyptian-blue:               #103aae;
+$color-sapphire:                    #102654;
+$color-resolution-blue:             #1C3374;
+$color-black-russian:               #030a1a;
+$color-chambray:                    #495a7d;
+$color-persian-blue:                #2e35ac;
+$color-grey:                        #787878;
+
 // Gradient
 
 $black-to-right:                    linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0) 75%);
@@ -28,6 +39,9 @@ $fz-default:                        16px;
 $ff-rouble:                         "Rouble", "Arial", sans-serif;
 
 $ff-placeholder:                    "Placeholder", "Arial", sans-serif;
+
+$ff-roboto:               "Roboto Condensed", "Arial", sans-serif;
+$ff-bebas:                      "Bebas Neue", "Arial", sans-serif;
 
 // Animation
 // ---------------------------------
@@ -51,8 +65,11 @@ $vp-1280:                           1280px;
 $vp-1440:                           1440px;
 $vp-1920:                           1920px;
 
+$mobile-width:                      767px;
+$tablet-width:                     1199px;
+
 // Retina
 // ---------------------------------
 
 $retina-dpi:                        144dpi;
-$retina-dppx:                       1.5dppx;
+$retina-dppx:                       2dppx;

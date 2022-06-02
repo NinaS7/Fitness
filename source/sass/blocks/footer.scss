@@ -1,0 +1,25 @@
+.footer {
+  background-color: $color-black-russian;
+  color: $color-default-white;
+  width: 100%;
+  min-height: 108px;
+
+  @media (max-width: $tablet-width) {
+    min-height: 114px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-height: 260px;
+  }
+}
+
+.footer__container {
+  padding: 42px 103px;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+
+  @media (max-width: $tablet-width) {
+    padding: 45px;
+  }
+}
+

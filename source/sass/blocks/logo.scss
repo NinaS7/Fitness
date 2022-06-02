@@ -1,0 +1,14 @@
+.logo {
+  width: 89px;
+  height: 20px;
+
+  @media (max-width: $tablet-width) {
+    width: 82px;
+    height: 18px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 68px;
+    height: 15px;
+  }
+}
