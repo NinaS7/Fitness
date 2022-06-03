@@ -1,9 +1,11 @@
 .gym {
+  margin-bottom: 80px;
+}
+
+.gym__wrapper {
   position: relative;
-  padding: 0 103px;
   display: grid;
   grid-template-columns: 1fr max-content;
-  margin-bottom: 237px;
 }
 
 .gym__info {
@@ -26,6 +28,7 @@
 }
 
 .gym__info p {
+  font-family: $ff-roboto;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -33,4 +36,16 @@
 
 .gym__video {
   position: absolute;
+  top: 287px;
+  left: 38%;
+  z-index: 5;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 10;
+    background-color: rgba(20, 54, 122, 0.5);
+  }
 }

@@ -13,8 +13,8 @@
   }
 }
 
-.footer__container {
-  padding: 42px 103px;
+.footer__wrapper {
+  padding: 42px 0;
   display: grid;
   grid-template-columns: min-content 1fr min-content;
 
@@ -22,4 +22,3 @@
     padding: 45px;
   }
 }
-

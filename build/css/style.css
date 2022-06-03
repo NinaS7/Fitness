@@ -389,7 +389,7 @@ template {
   font-weight: 700;
   font-family: "Bebas Neue", cursive;
   font-display: swap;
-  src: url("../fonts/bebasneue-bold.woff2") format("woff2"), url("../fonts/bebasneue-bold.woff") format("woff");
+  src: url("../fonts/bebas-neue-bold.woff2") format("woff2"), url("../fonts/bebas-neue-bold.woff") format("woff");
 }
 
 @font-face {
@@ -397,7 +397,7 @@ template {
   font-weight: 400;
   font-family: "Bebas Neue", "Arial", sans-serif;
   font-display: swap;
-  src: url("../fonts/bebasneue-regular.woff2") format("woff2"), url("../fonts/bebasneue-regular.woff") format("woff");
+  src: url("../fonts/bebas-neue-regular.woff2") format("woff2"), url("../fonts/bebas-neue-regular.woff") format("woff");
 }
 
 @font-face {
@@ -405,7 +405,7 @@ template {
   font-weight: 300;
   font-family: "Roboto Condensed", sans-serif;
   font-display: swap;
-  src: url("../fonts/robotocondensed-light.woff2") format("woff2"), url("../fonts/robotocondensed-light.woff") format("woff");
+  src: url("../fonts/roboto-condensed-light.woff2") format("woff2"), url("../fonts/roboto-condensed-light.woff") format("woff");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-weight: 400;
   font-family: "Roboto Condensed", sans-serif;
   font-display: swap;
-  src: url("../fonts/robotocondensed.woff2") format("woff2"), url("../fonts/robotocondensed.woff") format("woff");
+  src: url("../fonts/roboto-condensed.woff2") format("woff2"), url("../fonts/roboto-condensed.woff") format("woff");
 }
 
 @font-face {
@@ -421,7 +421,7 @@ template {
   font-weight: 700;
   font-family: "Roboto Condensed", sans-serif;
   font-display: swap;
-  src: url("../fonts/robotocondensed-bold.woff2") format("woff2"), url("../fonts/robotocondensed-bold.woff") format("woff");
+  src: url("../fonts/roboto-condensed-bold.woff2") format("woff2"), url("../fonts/roboto-condensed-bold.woff") format("woff");
 }
 
 *,
@@ -642,9 +642,9 @@ button,
 
 .container {
   width: 100%;
-  max-width: 1920px;
+  max-width: 1366px;
   margin: 0 auto;
-  padding: 0 40px;
+  padding: 0 103px;
 }
 
 .btn {
@@ -787,6 +787,10 @@ button,
   width: 100%;
   min-height: 658px;
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  margin-bottom: 121px;
+}
+
+.header__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -794,17 +798,18 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin-bottom: 120px;
 }
 
 .header__top {
-  padding: 30px 103px 1px;
+  width: 100%;
+  padding: 30px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+  position: absolute;
 }
 
 .header__phone {
@@ -821,16 +826,18 @@ button,
 }
 
 .header__main {
-  margin: 0 103px;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding-top: 51px;
 }
 
 .header__description {
   position: relative;
   color: #ffffff;
   text-align: right;
+  margin-right: 64px;
 }
 
 .header__description p {
@@ -838,14 +845,14 @@ button,
   font-size: 49px;
   line-height: 59px;
   letter-spacing: -0.03em;
-  margin: 121px 0 25px;
+  margin: 113px 0 2px;
   text-transform: uppercase;
 }
 
 .header__description h1 {
   font-family: "Bebas Neue", "Arial", sans-serif;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   font-size: 109px;
   line-height: 109px;
   letter-spacing: -0.03em;
@@ -858,6 +865,7 @@ button,
   line-height: 21px;
   position: absolute;
   margin: 0;
+  bottom: 212px;
 }
 
 .header__description a {
@@ -871,13 +879,17 @@ button,
   width: 230px;
   text-align: center;
   border: 4px solid #ffffff;
-  padding: 24px 10px;
+  padding: 19px 10px;
 }
 
 .header__description a:hover,
 .header__description a:focus {
   background-color: #ffffff;
   color: #102654;
+}
+
+.header img {
+  max-width: 500px;
 }
 
 .header__social {
@@ -894,6 +906,7 @@ button,
   -ms-flex-item-align: end;
   align-self: flex-end;
   margin-bottom: 45px;
+  margin-left: 186px;
 }
 
 .header__social li {
@@ -918,15 +931,17 @@ button,
 }
 
 .gym {
+  margin-bottom: 80px;
+}
+
+.gym__wrapper {
   position: relative;
-  padding: 0 103px;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr -webkit-max-content;
   -ms-grid-columns: 1fr max-content;
   grid-template-columns: 1fr -webkit-max-content;
   grid-template-columns: 1fr max-content;
-  margin-bottom: 237px;
 }
 
 .gym__info {
@@ -949,6 +964,7 @@ button,
 }
 
 .gym__info p {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
   font-weight: 300;
   font-size: 16px;
   line-height: 24px;
@@ -956,24 +972,453 @@ button,
 
 .gym__video {
   position: absolute;
+  top: 287px;
+  left: 38%;
+  z-index: 5;
+}
+
+.gym__video::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 10;
+  background-color: rgba(20, 54, 122, 0.5);
 }
 
 .subscriptions {
   background-color: #f8f9fC;
-  padding: 120px 103px;
-  text-align: center;
+  position: relative;
+  z-index: 1;
+  margin-bottom: 120px;
+}
+
+.subscriptions::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  width: 321px;
+  height: 384px;
+  bottom: -70px;
+  right: 0;
+  background-color: transparent;
+  background-image: url("../img/weights-desktop.jpg");
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(150deg);
+  -ms-transform: rotate(150deg);
+  transform: rotate(150deg);
+}
+
+.subscriptions__wrapper {
+  padding: 117px 0;
 }
 
 .subscriptions h2 {
   font-family: "Bebas Neue", "Arial", sans-serif;
   font-size: 49px;
   line-height: 49px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
+  text-align: center;
+  margin: 0;
+  margin-bottom: 37px;
 }
 
 .subscriptions ul {
   list-style: none;
+  padding: 0;
+}
+
+.subscriptions__time {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-width: 341px;
+  margin: 0 35%;
+  margin-bottom: 38px;
+  border-bottom: 2px solid rgba(120, 120, 120, 0.2);
+}
+
+.subscriptions__time-item {
+  padding-bottom: 10px;
+}
+
+.subscriptions__time-item:active {
+  border-bottom: 2px solid #d10a42;
+}
+
+.subscriptions__time-item--active {
+  border: none;
+  background-color: transparent;
+  border-bottom: 2px solid #d10a42;
+}
+
+.subscriptions button {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: -0.04em;
+  opacity: 0.5;
+  width: inherit;
+  height: inherit;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.subscriptions button:hover,
+.subscriptions button:focus {
+  color: #102654;
+}
+
+.subscriptions__tab {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+}
+
+.subscriptions__tab li {
+  max-width: 360px;
+  max-height: 448px;
+  padding: 56px 70px 60px;
+  border: 7px solid #ffffff;
+  background-color: #ffffff;
+  text-align: center;
+  position: relative;
+}
+
+.subscriptions__tab li:hover,
+.subscriptions__tab li:focus {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 7px solid;
+  border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+  border-image-slice: 1;
+}
+
+.subscriptions__tab li:hover a,
+.subscriptions__tab li:focus a {
+  border: 0;
+  background: -o-linear-gradient(352.95deg, #ED0233 17.6%, #003EB7 95.31%);
+  background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+  color: #ffffff;
+  cursor: pointer;
+  padding: 26px 10px;
+}
+
+.subscriptions__tab h3 {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 29px;
+  position: relative;
+  z-index: 1;
+}
+
+.subscriptions__tab span {
+  color: #495a7d;
+  position: relative;
+  z-index: 1;
+}
+
+.subscriptions__price {
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 90px;
+  color: #103aae;
+  position: relative;
+  z-index: 1;
+  margin: 65px 0 34px;
+  padding-right: 50px;
+  letter-spacing: -0.03em;
+}
+
+.subscriptions__price::after {
+  content: '';
+  position: absolute;
+  z-index: 2;
+  width: 30px;
+  height: 42px;
+  background-image: url("../img/svg/icon-rub.svg");
+  background-repeat: no-repeat;
+  bottom: 23px;
+  right: 21px;
+}
+
+.subscriptions__price-back {
+  position: absolute;
+  left: 0;
+  z-index: 0;
+  width: 100%;
+  height: 100%;
+  font-weight: 700;
+  font-size: 90px;
+  line-height: 150px;
+  color: #e8e8e8;
+  opacity: 0.48;
+  margin: 0;
+  padding-top: 9px;
+}
+
+.subscriptions__tab a {
+  display: block;
+  width: 205px;
+  padding: 24px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  border: 2px solid #102654;
+}
+
+.promo {
+  position: relative;
+  margin-bottom: 120px;
+}
+
+.promo__wrapper {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr -webkit-max-content;
+  -ms-grid-columns: 1fr max-content;
+  grid-template-columns: 1fr -webkit-max-content;
+  grid-template-columns: 1fr max-content;
+  width: 100%;
+}
+
+.promo__info {
+  background-color: #ed0233;
+  color: #ffffff;
+  padding: 87px 78px;
+}
+
+.promo__info p {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.promo__title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 33px;
+}
+
+.promo__title h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 90px;
+  line-height: 90px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.promo__inner h3 {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+}
+
+.promo__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70px;
+  padding-top: 9px;
+  border-top: 1px solid #ffffff;
+}
+
+.promo__number {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 60px;
+  margin: 0;
+}
+
+.promo__month {
+  margin: 0;
+  margin-left: 7px;
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.promo__time p {
+  border-top: 1px solid #ffffff;
+}
+
+.promo__text {
+  font-size: 18px;
+  line-height: 27px;
+  margin: 0;
+  margin-bottom: 55px;
+}
+
+.promo a {
+  display: block;
+  width: 343px;
+  padding: 29px 10px;
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 14px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #ffffff;
+  border: 4px solid #ffffff;
+  text-align: center;
+}
+
+.coaches {
+  max-width: 1366px;
+}
+
+.advantages {
+  max-width: 1366px;
+}
+
+.sale {
+  max-width: 1366px;
+}
+
+.reviews {
+  max-width: 1366px;
+}
+
+.feedback {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  max-width: 1366px;
+}
+
+.form {
+  background-color: #102654;
+}
+
+.form__container {
+  padding: 70px 0 70px 103px;
+}
+
+.form h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 64px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-bottom: 48px;
+}
+
+.form form {
+  max-width: 410px;
+}
+
+.form__inputs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.form input {
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid #74819c;
+  padding: 10px 12px 10px 0;
+  font-size: 14px;
+  line-height: 16px;
+  color: #ffffff;
+}
+
+.form input:hover,
+.form input:focus {
+  border-radius: 3px;
+  background-color: #ffffff;
+  color: #102654;
+}
+
+.form button {
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  padding: 21px 10px;
+  background-color: transparent;
+  color: #ffffff;
+  border: 3px solid #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.contacts {
+  border-top: 1px solid #74819c;
+  padding: 70px 120px;
+}
+
+.contacts h2 {
+  font-family: "Bebas Neue", "Arial", sans-serif;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  margin-bottom: 57px;
+}
+
+.contacts__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+.contacts__info::before {
+  content: "";
+  position: absolute;
+  height: 102px;
+  width: 1px;
+  background-color: #74819c;
+}
+
+.contacts__info ul {
+  list-style: none;
+}
+
+.contacts__info li {
+  margin-bottom: 30px;
+}
+
+.contacts__info h3 {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.contacts__info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 21px;
 }
 
 .footer {
@@ -983,8 +1428,8 @@ button,
   min-height: 108px;
 }
 
-.footer__container {
-  padding: 42px 103px;
+.footer__wrapper {
+  padding: 42px 0;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: -webkit-min-content 1fr -webkit-min-content;
@@ -1040,13 +1485,11 @@ button,
   }
 }
 
-@media (max-width: 1439px) {
-  .container {
-    padding: 0 32px;
-  }
-}
-
 @media (max-width: 1199px) {
+  .container {
+    padding: 45px;
+  }
+
   .header__social {
     display: none;
   }
@@ -1060,7 +1503,7 @@ button,
     min-height: 114px;
   }
 
-  .footer__container {
+  .footer__wrapper {
     padding: 45px;
   }
 
@@ -1069,15 +1512,9 @@ button,
   }
 }
 
-@media (max-width: 1023px) {
-  .container {
-    padding: 0 24px;
-  }
-}
-
 @media (max-width: 767px) {
   .container {
-    padding: 0 16px;
+    padding: 15px;
   }
 
   .modal__wrapper {
@@ -1091,6 +1528,15 @@ button,
 
   .modal--fit-content .modal__content {
     width: 100%;
+  }
+
+  .header__description h1 {
+    font-size: 78px;
+    line-height: 78px;
+  }
+
+  .header img {
+    display: none;
   }
 
   .logo {
@@ -1109,5 +1555,11 @@ button,
 
   .social {
     gap: 35px;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
+  .subscriptions::after {
+    background-image: url("../img/weights-desktop@2x.jpg");
   }
 }

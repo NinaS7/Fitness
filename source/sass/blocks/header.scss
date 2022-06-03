@@ -2,15 +2,20 @@
   width: 100%;
   min-height: 658px;
   background: conic-gradient(from 130.31deg at 16.03% 39.06%, #B80027 -46.69deg, #003D85 32.24deg, #B80027 313.31deg, #003D85 392.24deg);
+  margin-bottom: 121px;
+}
+
+.header__wrapper {
   display: flex;
   flex-direction: column;
-  margin-bottom: 120px;
 }
 
 .header__top {
-  padding: 30px 103px 1px;
+  width: 100%;
+  padding: 30px 0;
   display: flex;
   justify-content: space-between;
+  position: absolute;
 }
 
 .header__phone {
@@ -27,14 +32,16 @@
 }
 
 .header__main {
-  margin: 0 103px;
+  margin: 0;
   display: flex;
+  padding-top: 51px;
 }
 
 .header__description {
   position: relative;
   color: $color-default-white;
   text-align: right;
+  margin-right: 64px;
 }
 
 .header__description p {
@@ -42,18 +49,23 @@
   font-size: 49px;
   line-height: 59px;
   letter-spacing: -0.03em;
-  margin: 121px 0 25px;
+  margin: 113px 0 2px;
   text-transform: uppercase;
 }
 
 .header__description h1 {
   font-family: $ff-bebas;
   margin: 0;
-  margin-bottom: 80px;
+  margin-bottom: 60px;
   font-size: 109px;
   line-height: 109px;
   letter-spacing: -0.03em;
   text-transform: uppercase;
+
+  @media (max-width: $mobile-width) {
+    font-size: 78px;
+    line-height: 78px;
+  }
 }
 
 .header__description ul {
@@ -62,6 +74,8 @@
   line-height: 21px;
   position: absolute;
   margin: 0;
+  bottom: 212px;
+
 }
 
 .header__description a {
@@ -75,12 +89,20 @@
   width: 230px;
   text-align: center;
   border: 4px solid $color-default-white;
-  padding: 24px 10px;
+  padding: 19px 10px;
 
   &:hover,
   &:focus {
     background-color: $color-default-white;
     color: $color-sapphire;
+  }
+}
+
+.header img {
+  max-width: 500px;
+
+  @media (max-width: $mobile-width) {
+    display: none;
   }
 }
 
@@ -92,6 +114,7 @@
   flex-direction: column;
   align-self: flex-end;
   margin-bottom: 45px;
+  margin-left: 186px;
 
   @media (max-width: $tablet-width) {
     display: none;
