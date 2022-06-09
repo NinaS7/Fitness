@@ -1,5 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
+import {getMask} from './modules/input-tel';
+import {onTabs} from './modules/tabs';
 
 // ---------------------------------
 
@@ -9,6 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
   // ---------------------------------
 
   iosVhFix();
+  onTabs();
+  getMask();
 
   // Modules
   // ---------------------------------

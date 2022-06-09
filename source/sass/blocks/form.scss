@@ -3,21 +3,58 @@
 }
 
 .form__container {
-  padding: 70px 0 70px 103px;
+  max-width: 683px;
+  padding: 62px 170px 68px 103px;
+  margin-left: auto;
+
+  @media (max-width: $tablet-width) {
+    max-width: 768px;
+    margin: 0 auto;
+    padding: 70px 163px 70px 133px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 320px;
+    max-width: none;
+    //  width: 100%;
+    padding: 70px 15px;
+  }
 }
 
 .form h2 {
   font-family: $ff-bebas;
   font-size: 49px;
   line-height: 64px;
-  letter-spacing: -0.03em;
+  letter-spacing: 0.03em;
   text-transform: uppercase;
   color: $color-default-white;
-  margin-bottom: 48px;
+  margin: 0;
+  margin-bottom: 27px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 32px;
+    line-height: 32px;
+  }
 }
 
 .form form {
   max-width: 410px;
+
+  @media (max-width: $tablet-width) {
+    max-width: 472px;
+  }
+
+  @media (max-width: $mobile-width) {
+    max-width: none;
+    min-width: 290px;
+    width: 100%;
+  }
 }
 
 .form__inputs {
@@ -25,22 +62,49 @@
   justify-content: space-between;
   margin-bottom: 30px;
   width: 100%;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+    margin-bottom: 40px;
+  }
 }
 
 .form input {
   background-color: transparent;
   border: none;
   border-bottom: 1px solid #74819c;
-  padding: 10px 12px 10px 0;
+  padding: 10px 12px 5px 0;
   font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
+  letter-spacing: -0.1em;
+  width: 190px;
+
+  &:invalid {
+    color: $color-torch-red;
+    box-shadow: none;
+  }
+
+  &::placeholder {
+    color: $color-default-white;
+  }
 
   &:hover,
   &:focus {
-    border-radius: 3px;
     background-color: $color-default-white;
     color: $color-sapphire;
+
+    &::placeholder {
+      color: $color-sapphire;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 206px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
   }
 }
 
@@ -48,12 +112,12 @@
   display: block;
   width: 100%;
   cursor: pointer;
-  padding: 21px 10px;
+  padding: 16px 10px;
   background-color: transparent;
   color: $color-default-white;
   border: 3px solid $color-default-white;
   font-weight: 700;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;

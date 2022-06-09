@@ -1,3 +1,127 @@
 .reviews {
-  max-width: 1366px;
+  margin-bottom: 120px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 100px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 70px;
+  }
+}
+
+.reviews h2 {
+  font-family: $ff-bebas;
+  font-size: 49px;
+  line-height: 49px;
+  letter-spacing: 0.03em;
+  margin: 0;
+  margin-bottom: 50px;
+  text-align: center;
+
+  @media (max-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 41px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 32px;
+    line-height: 32px;
+  }
+}
+
+.reviews__wrapper {
+  display: flex;
+  position: relative;
+  margin: 0 300px;
+  height: 242px;
+
+  @media (max-width: $tablet-width) {
+    margin: 0 56px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin: 0 32px;
+    height: 335px;
+  }
+}
+
+.reviews__list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  width: 560px;
+  height: 242px;
+
+  @media (max-width: $tablet-width) {
+    width: 566px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 226px;
+    height: 335px;
+  }
+}
+
+.reviews__item {
+  width: 560px;
+  height: 242px;
+  background-color: $color-resolution-blue;
+  box-shadow: 0px 0px 40px rgba($color-resolution-blue, 0.2);
+  color: $color-default-white;
+  display: flex;
+  padding: 62px;
+
+  @media (max-width: $tablet-width) {
+    padding: 62px 65px 42px;
+    width: 566px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 226px;
+    width: 100%;
+    height: 335px;
+    padding: 40px 25px;
+    position: relative;
+  }
+}
+
+.reviews img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: cover;
+  margin-right: 28px;
+
+  @media (max-width: $mobile-width) {
+    position: absolute;
+    width: 68px;
+    height: 68px;
+    top: 25px;
+    display: block;
+  }
+}
+
+.reviews h3 {
+  margin: 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 16px;
+  margin-bottom: 19px;
+  letter-spacing: -0.06em;
+
+  @media (max-width: $mobile-width) {
+    font-size: 20px;
+    line-height: 26px;
+    padding-left: 100px;
+  }
+}
+
+.reviews p {
+  font-size: 14px;
+  line-height: 22px;
+
+  @media (max-width: $mobile-width) {
+    text-align: center;
+  }
 }

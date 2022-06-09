@@ -4,6 +4,7 @@
 @import "vendor/normalize";
 // Swiper 7.4.1
 // @import "vendor/swiper";
+@import "node_modules/swiper/swiper";
 
 // Global
 // ---------------------------------
@@ -20,12 +21,12 @@
 
 @import "blocks/btn";
 @import "blocks/modal";
-
 @import "blocks/header";
 @import "blocks/logo";
 @import "blocks/gym";
 @import "blocks/subscriptions";
 @import "blocks/promo";
+@import "blocks/toggle";
 @import "blocks/coaches";
 @import "blocks/advantages";
 @import "blocks/sale";

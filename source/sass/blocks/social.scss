@@ -1,7 +1,7 @@
 .social {
   display: grid;
-  grid-template-columns: 24px 24px 24px;
-  gap: 25px;
+  grid-template-columns: 32px 24px 24px;
+  gap: 14px;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -13,4 +13,15 @@
   @media (max-width: $mobile-width) {
     gap: 35px; //
   }
+}
+
+.social a {
+  &:hover,
+  &:focus {
+    opacity: 0.5;
+  }
+}
+
+.social__link--facebook a {
+  padding-left: 11px;
 }

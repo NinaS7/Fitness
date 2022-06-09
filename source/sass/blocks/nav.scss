@@ -2,14 +2,29 @@
   list-style: none;
   display: flex;
   flex-wrap: wrap;
-  margin: 0;
+  margin: 0 auto;
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+    //  flex-direction:column;
+    column-count: 2;
+    margin-bottom: 40px;
+    justify-content: flex-end;
+  }
+}
+
+.nav li {
+  margin-right: 40px;
+
+  @media (max-width: $tablet-width) {
+    margin-right: 30px;
+  }
 }
 
 .nav a {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 16px;
   color: $color-default-white;
-  margin-right: 40px;
 
   &:hover,
   &:focus {
@@ -19,5 +34,9 @@
   @media (max-width: $mobile-width) {
     font-size: 16px;
     line-height: 19px;
+
+    &:first-child {
+      grid-row-start: 2;
+    }
   }
 }

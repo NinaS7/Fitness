@@ -2,29 +2,51 @@
   background-color: $color-ghost-white;
   position: relative;
   z-index: 1;
-  margin-bottom: 120px;
+  margin-bottom: 124px;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: -1;
-    width: 321px;
-    height: 384px;
-    bottom: -70px;
+    width: 287px;
+    height: 413px;
+    bottom: -74px;
     right: 0;
     background-color: transparent;
-    background-image: url("../img/weights-desktop.jpg");
+    background-image: url("../img/weights-desktop.png");
     background-repeat: no-repeat;
-    transform: rotate(150deg);
+    transform: rotate(0deg);
+  }
 
-    @media (min-resolution: $retina-dppx) {
-      background-image: url("../img/weights-desktop@2x.jpg");
+  @media (max-width: $tablet-width) {
+    margin-bottom: 98px;
+
+    &::after {
+      background-image: url("../img/weights-tablet.png");
+      width: 347px;
+      bottom: -92px;
+    }
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 70px;
+
+    &::after {
+      display: none;
     }
   }
 }
 
 .subscriptions__wrapper {
   padding: 117px 0;
+
+  @media (max-width: $tablet-width) {
+    padding: 100px 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 70px 0;
+  }
 }
 
 .subscriptions h2 {
@@ -35,12 +57,25 @@
   text-transform: uppercase;
   text-align: center;
   margin: 0;
-  margin-bottom: 37px;
+  margin-bottom: 35px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 42px;
+    line-height: 42px;
+    margin-bottom: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 32px;
+    line-height: 32px;
+    margin-bottom: 35px;
+  }
 }
 
 .subscriptions ul {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .subscriptions__time {
@@ -48,29 +83,28 @@
   justify-content: space-between;
   min-width: 341px;
   margin: 0 35%;
-  margin-bottom: 38px;
+  margin-bottom: 40px;
   border-bottom: 2px solid rgba(120, 120, 120, 0.2);
-}
 
-.subscriptions__time-item {
-  padding-bottom: 10px;
+  @media (max-width: $tablet-width) {
+    min-width: 332px;
+    margin: 0 25%;
+    margin-bottom: 45px;
+  }
 
-  &:active {
-    border-bottom: 2px solid #d10a42;
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+    margin: 0;
+    margin-bottom: 35px;
   }
 }
 
-.subscriptions__time-item--active {
-  border: none;
-  background-color: transparent;
-  border-bottom: 2px solid #d10a42;
-}
-
-.subscriptions button {
+.subscriptions__button {
+  padding-bottom: 9px;
   font-family: $ff-roboto;
   font-size: 20px;
   line-height: 30px;
-  letter-spacing: -0.04em;
+  letter-spacing: -0.05em;
   opacity: 0.5;
   width: inherit;
   height: inherit;
@@ -82,38 +116,83 @@
   &:focus {
     color: $color-sapphire;
   }
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 27px;
+  }
+
+  @media (max-width: $mobile-width) {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+.subscriptions__button--active {
+  border: none;
+  background-color: transparent;
+  border-bottom: 3px solid #d10a42;
 }
 
 .subscriptions__tab {
-  display: grid;
+  display: none;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 40px;
 
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
+
+  @media (max-width: $mobile-width) {
+    gap: 35px;
+  }
+}
+
+.subscriptions__tab--active {
+  display: grid;
 }
 
 .subscriptions__tab li {
   max-width: 360px;
   max-height: 448px;
-  padding: 56px 70px 60px;
+  padding: 15% 19% 16%;
   border: 7px solid $color-default-white;
   background-color: $color-default-white;
   text-align: center;
   position: relative;
+  box-sizing: border-box;
 
   &:hover,
-  &:focus {
-    box-sizing: border-box;
+  &:focus,
+  &:focus-within,
+  &:active {
+  //  box-sizing: border-box;
     border: 7px solid;
-    border-image-source: linear-gradient(148.82deg, #D10A42 0.85%, #00359F 100%);
+    border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
 
     a {
       border: 0;
-      background: linear-gradient(97.05deg, #ED0233 17.6%, #003EB7 95.31%);
+      background: linear-gradient(97.05deg, #ed0233 17.6%, #003eb7 95.31%);
       color: $color-default-white;
-      cursor: pointer;
       padding: 26px 10px;
+      cursor: pointer;
     }
+  }
+
+  @media (max-width: $tablet-width) {
+    margin: 0 auto;
+    min-width: 442px;
+    max-width: none;
+    min-height: 448px;
+    max-height: none;
+    padding: 55px 110px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+    min-height: 384px;
+    padding: 55px 42px;
   }
 }
 
@@ -123,29 +202,36 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 29px;
+  letter-spacing: -0.09em;
   position: relative;
   z-index: 1;
+
+  @media (max-width: $mobile-width) {
+    font-size: 22px;
+    line-height: 24px;
+  }
 }
 
 .subscriptions__tab span {
   color: $color-chambray;
   position: relative;
   z-index: 1;
+  letter-spacing: -0.06em;
 }
 
 .subscriptions__price {
   font-weight: 700;
   font-size: 60px;
   line-height: 90px;
+  letter-spacing: -0.06em;
   color: $color-egyptian-blue;
   position: relative;
   z-index: 1;
   margin: 65px 0 34px;
   padding-right: 50px;
-  letter-spacing: -0.03em;
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     z-index: 2;
     width: 30px;
@@ -155,11 +241,23 @@
     bottom: 23px;
     right: 21px;
   }
+
+  @media (max-width: $mobile-width) {
+    font-size: 48px;
+    line-height: 72px;
+    margin: 81px 0 50px;
+    padding-right: 47px;
+
+    &::after {
+      width: 24px;
+      height: 33px;
+    }
+  }
 }
 
 .subscriptions__price-back {
   position: absolute;
-//  top: 130px;
+  //  top: 130px;
   left: 0;
   z-index: 0;
   width: 100%;
@@ -171,16 +269,28 @@
   opacity: 0.48;
   margin: 0;
   padding-top: 9px;
+
+  @media (max-width: $mobile-width) {
+    font-size: 80px;
+    line-height: 120px;
+  }
 }
 
 .subscriptions__tab a {
   display: block;
-  width: 205px;
+  width: 208px;
   padding: 24px 10px;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
-//  letter-spacing: 0.05em;
+  letter-spacing: -0.08em;
   text-transform: uppercase;
   border: 2px solid $color-sapphire;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $color-egyptian-blue;
+    cursor: pointer;
+  }
 }

@@ -2,6 +2,10 @@
   width: 89px;
   height: 20px;
 
+  img {
+    width: 86px;
+  }
+
   @media (max-width: $tablet-width) {
     width: 82px;
     height: 18px;

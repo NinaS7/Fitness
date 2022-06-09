@@ -1,88 +1,226 @@
 .promo {
-  position: relative;
-  margin-bottom: 120px;
+  margin-bottom: 119px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 99px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 70px;
+  }
 }
 
 .promo__wrapper {
-  display: grid;
-  grid-template-columns: 1fr max-content;
+  display: flex;
   width: 100%;
+
+  @media (max-width: $mobile-width) {
+    flex-direction: column;
+  }
 }
 
 .promo__info {
   background-color: $color-torch-red;
   color: $color-default-white;
-  padding: 87px 78px;
+  padding: 7% 6.8%;
 
-  p {
-    font-size: 18px;
-    line-height: 27px;
+  @media (max-width: 1330px) {
+    padding: 5%;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 47px 45px;
+    position: relative;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 51px 44px;
   }
 }
 
 .promo__title {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 33px;
+  margin-bottom: 9px;
+  max-width: 343px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+  }
 }
 
 .promo__title h2 {
   font-family: $ff-bebas;
   font-size: 90px;
-  line-height: 90px;
+  line-height: 91px;
   letter-spacing: 0.03em;
   margin: 0;
-  margin-bottom: 12px;
+  min-width: 210px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 52px;
+    line-height: 52px;
+    width: 146px;
+  }
+}
+
+.promo__inner {
+  width: 93px;
+  padding-right: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @media (max-width: $tablet-width) {
+    width: 56px;
+  }
 }
 
 .promo__inner h3 {
-  font-size: 18px;
+  font-size: 17px;
   line-height: 27px;
   margin: 0;
+  padding-bottom: 3px;
+  letter-spacing: -0.08em;
+
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 0;
+  }
 }
 
 .promo__data {
   display: flex;
   width: 70px;
-  padding-top: 9px;
+  padding-top: 7px;
   border-top: 1px solid $color-default-white;
+
+  @media (max-width: $tablet-width) {
+    width: 42px;
+    padding-top: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 53px;
+  }
 }
 
 .promo__number {
   font-weight: 700;
-  font-size: 40px;
-  line-height: 60px;
+  font-size: 37px;
+  line-height: 36px;
   margin: 0;
+
+  @media (max-width: $tablet-width) {
+    font-size: 24px;
+    line-height: 36px;
+  }
 }
 
 .promo__month {
   margin: 0;
   margin-left: 7px;
   font-size: 14px;
-  line-height: 21px;
+  line-height: 17px;
+  letter-spacing: -0.1em;
+
+  @media (max-width: $tablet-width) {
+    font-size: 10px;
+    line-height: 15px;
+    margin: 1px 0 0 2px
+  }
 }
 
-.promo__time p {
+.promo__time {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 75px;
+  margin-bottom: 12px;
+
+  @media (max-width: $tablet-width) {
+    height: 51px;
+    margin: 0;
+  }
+}
+
+.promo__time .promo__number {
+  padding-top: 7px;
   border-top: 1px solid $color-default-white;
+  line-height: 31px;
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
 }
 
 .promo__text {
   font-size: 18px;
   line-height: 27px;
   margin: 0;
-  margin-bottom: 55px;
+  margin-bottom: 45px;
+  letter-spacing: -0.06em;
+
+  @media (max-width: $tablet-width) {
+    font-size: 12px;
+    line-height: 18px;
+    margin-bottom: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .promo a {
   display: block;
-  width: 343px;
-  padding: 29px 10px;
+  max-width: 344px;
+  width: 100%;
+  padding: 24px 10px;
   font-weight: 700;
   font-size: 12px;
   line-height: 14px;
-  letter-spacing: 0.05em;
+  letter-spacing: -0.05em;
   text-transform: uppercase;
   color: $color-default-white;
   border: 4px solid $color-default-white;
   text-align: center;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $tablet-width) {
+    min-width: 202px;
+    padding: 14px 10px 11px;
+    font-size: 10px;
+    line-height: 12px;
+    border: 2px solid $color-default-white;
+    position: absolute;
+    bottom: 50px;
+    width: 202px;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
+    max-width: none;
+    position: static;
+  }
+}
+
+.promo img {
+  max-width: 660px;
+  width: 100%;
+  object-fit: cover;
+
+  @media (max-width: $tablet-width) {
+    min-width: 386px;
+    max-width: none;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 290px;
+  }
 }
