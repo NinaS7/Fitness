@@ -1428,6 +1428,7 @@ button,
   border: 7px solid;
   border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
   border-image-slice: 1;
+  position: relative;
 }
 
 .subscriptions__tab li:hover a,
@@ -1440,6 +1441,7 @@ button,
   color: #ffffff;
   padding: 26px 10px;
   cursor: pointer;
+  position: absolute;
 }
 
 .subscriptions__tab h3 {
@@ -2215,6 +2217,10 @@ button,
 
 .reviews__button--next {
   right: 21%;
+}
+
+.swiper-button-disabled {
+  display: none;
 }
 
 .feedback {
