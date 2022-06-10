@@ -3,9 +3,12 @@ import {initModals} from './modules/modals/init-modals';
 import {getMask} from './modules/input-tel';
 import {onTabs} from './modules/tabs';
 
+const subscriptions = document.querySelector('.subscriptions__wrapper');
 const anchors = document.querySelectorAll('.scroll-to');
 
 window.addEventListener('DOMContentLoaded', () => {
+
+  subscriptions.classList.remove('subscriptions__wrapper--nojs');
 
   iosVhFix();
   onTabs();

@@ -54,10 +54,14 @@
   padding: 0;
   display: flex;
   position: relative;
-  width: 1160px;
+  max-width: 1160px;
 
   @media (max-width: $tablet-width) {
-    width: 566px;
+    min-width: 566px;
+  }
+
+  @media (max-width: $mobile-width) {
+    min-width: 226px;
   }
 }
 

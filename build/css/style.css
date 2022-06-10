@@ -1278,12 +1278,6 @@ button,
   cursor: pointer;
 }
 
-.gym a svg {
-  position: absolute;
-  top: 28px;
-  left: 31px;
-}
-
 .gym a::before {
   content: "";
   position: absolute;
@@ -1301,6 +1295,12 @@ button,
   -webkit-transform: scale(1.2);
   -ms-transform: scale(1.2);
   transform: scale(1.2);
+}
+
+.gym svg {
+  position: absolute;
+  top: 28px;
+  left: 31px;
 }
 
 .subscriptions {
@@ -1506,6 +1506,28 @@ button,
   cursor: pointer;
 }
 
+.subscriptions__nojs {
+  display: none;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subscriptions__wrapper--nojs .subscriptions__nojs {
+  display: block;
+}
+
+.subscriptions__wrapper--nojs .subscriptions__time {
+  display: none;
+}
+
+.subscriptions__wrapper--nojs .subscriptions__tab {
+  display: -ms-grid;
+  display: grid;
+}
+
 .promo {
   margin-bottom: 119px;
 }
@@ -1681,7 +1703,7 @@ button,
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  width: 1160px;
+  max-width: 1160px;
 }
 
 .coaches__card {
@@ -2644,7 +2666,7 @@ button,
     left: -10px;
   }
 
-  .gym a svg {
+  .gym svg {
     width: 12px;
     height: 12px;
     top: 21px;
@@ -2788,7 +2810,7 @@ button,
   }
 
   .coaches__list {
-    width: 566px;
+    min-width: 566px;
   }
 
   .coaches__card {
@@ -3336,6 +3358,10 @@ button,
     font-size: 32px;
     line-height: 32px;
     margin-bottom: 42px;
+  }
+
+  .coaches__list {
+    min-width: 226px;
   }
 
   .coaches__card {

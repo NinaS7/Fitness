@@ -303,3 +303,24 @@
     width: 100%;
   }
 }
+
+.subscriptions__nojs {
+  display: none;
+  font-weight: 700;
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.subscriptions__wrapper--nojs .subscriptions__nojs {
+  display: block;
+}
+
+.subscriptions__wrapper--nojs .subscriptions__time {
+  display: none;
+}
+
+.subscriptions__wrapper--nojs .subscriptions__tab {
+  display: grid;
+}
