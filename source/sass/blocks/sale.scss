@@ -124,6 +124,7 @@
   text-transform: uppercase;
   padding-bottom: 3px;
   border-bottom: 1px solid $color-default-white;
+  user-select: none;
 
   &:hover,
   &:focus {
@@ -214,6 +215,16 @@
   }
 }
 
+.sale__item p {
+  @media (max-width: $tablet-width) {
+    padding-right: 54px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 0;
+  }
+}
+
 .sale__list a {
   font-weight: 700;
   font-size: 11px;
@@ -221,6 +232,7 @@
   text-transform: uppercase;
   padding-bottom: 3px;
   border-bottom: 1px solid $color-resolution-blue;
+  user-select: none;
 
   &:hover,
   &:focus {

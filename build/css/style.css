@@ -1123,6 +1123,10 @@ button,
   text-align: center;
   border: 4px solid #ffffff;
   padding: 19px 10px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .header__description a:hover,
@@ -1276,6 +1280,10 @@ button,
   background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
   border-radius: 50%;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .gym a::before {
@@ -1372,6 +1380,10 @@ button,
   cursor: pointer;
   border: none;
   background-color: transparent;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .subscriptions__button:hover,
@@ -1498,6 +1510,10 @@ button,
   text-transform: uppercase;
   border: 2px solid #102654;
   cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .subscriptions__tab a:hover,
@@ -1654,6 +1670,10 @@ button,
   color: #ffffff;
   border: 4px solid #ffffff;
   text-align: center;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .promo a:hover,
@@ -2036,6 +2056,10 @@ button,
   text-transform: uppercase;
   padding-bottom: 3px;
   border-bottom: 1px solid #ffffff;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .sale__year a:hover,
@@ -2087,6 +2111,10 @@ button,
   text-transform: uppercase;
   padding-bottom: 3px;
   border-bottom: 1px solid #1c3374;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .sale__list a:hover,
@@ -2203,7 +2231,7 @@ button,
 
 .form__container {
   max-width: 683px;
-  padding: 62px 170px 68px 103px;
+  padding: 62px 25% 68px 15%;
   margin-left: auto;
 }
 
@@ -2315,6 +2343,11 @@ button,
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-appearance: none;
 }
 
 .form button:hover,
@@ -2362,7 +2395,7 @@ button,
   height: 102px;
   width: 1px;
   top: 6px;
-  left: 230px;
+  left: 58%;
   background-color: #74819c;
 }
 
@@ -2398,6 +2431,10 @@ button,
 
 .contacts__info a {
   font-size: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .contacts__info a:hover,
@@ -2514,6 +2551,22 @@ button,
 @media (max-width: 1330px) {
   .promo__info {
     padding: 5%;
+  }
+}
+
+@media (max-width: 1300px) {
+  .form__container {
+    padding-right: 85px;
+  }
+}
+
+@media (max-width: 1280px) {
+  .advantages__wrapper {
+    margin: 0;
+  }
+
+  .contacts__container {
+    padding-left: 60px;
   }
 }
 
@@ -2956,6 +3009,10 @@ button,
 
   .sale__list p {
     margin-bottom: 41px;
+  }
+
+  .sale__item p {
+    padding-right: 54px;
   }
 
   .sale__link {
@@ -3530,6 +3587,10 @@ button,
     margin-bottom: 19px;
   }
 
+  .sale__item p {
+    padding-right: 0;
+  }
+
   .sale__list a {
     padding-bottom: 0;
   }
@@ -3717,6 +3778,10 @@ button,
 
   .nav li:first-child {
     margin-top: 40px;
+  }
+
+  .nav__only {
+    margin-left: 20px;
   }
 
   .nav a {

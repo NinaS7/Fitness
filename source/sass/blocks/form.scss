@@ -4,8 +4,12 @@
 
 .form__container {
   max-width: 683px;
-  padding: 62px 170px 68px 103px;
+  padding: 62px 25% 68px 15%;
   margin-left: auto;
+
+  @media (max-width: 1300px) {
+    padding-right: 85px;
+  }
 
   @media (max-width: $tablet-width) {
     max-width: 768px;
@@ -123,6 +127,8 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+  user-select: none;
+  -webkit-appearance: none;
 
   &:hover,
   &:focus {

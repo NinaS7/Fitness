@@ -30,6 +30,12 @@
   }
 }
 
+.nav__only {
+  @media (max-width: $mobile-width) {
+    margin-left: 20px;
+  }
+}
+
 .nav a {
   font-size: 13px;
   line-height: 16px;

@@ -209,6 +209,7 @@
   background: linear-gradient(44.89deg, #003d85 25.38%, #b80027 74.89%);
   border-radius: 50%;
   cursor: pointer;
+  user-select: none;
 
   &::before {
     content: "";

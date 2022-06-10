@@ -11,6 +11,10 @@
   padding: 70px 120px 48px;
   margin-right: auto;
 
+  @media (max-width: 1280px) {
+    padding-left: 60px;
+  }
+
   @media (max-width: $tablet-width) {
     max-width: 768px;
     padding: 67px 175px 45px 133px;
@@ -58,7 +62,7 @@
     height: 102px;
     width: 1px;
     top: 6px;
-    left: 230px;
+    left: 58%;
     background-color: #74819c;
   }
 
@@ -120,6 +124,7 @@
 
 .contacts__info a {
   font-size: 12px;
+  user-select: none;
 
   &:hover,
   &:focus {

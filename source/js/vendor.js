@@ -18,7 +18,7 @@ const swiperReviews = new Swiper('.reviews__wrapper', {
 
 const swiperCoaches = new Swiper('.coaches__wrapper', {
   spaceBetween: 0,
-  //  slidesPerView: 1,
+  slidesPerView: 1,
   direction: 'horizontal',
   loop: true,
   modules: [Navigation],
