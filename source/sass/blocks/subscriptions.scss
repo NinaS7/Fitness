@@ -29,7 +29,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
 
     &::after {
       display: none;
@@ -68,7 +68,7 @@
   @media (max-width: $mobile-width) {
     font-size: 32px;
     line-height: 32px;
-    margin-bottom: 35px;
+    margin-bottom: 23px;
   }
 }
 
@@ -125,6 +125,7 @@
   @media (max-width: $mobile-width) {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 8px;
   }
 }
 
@@ -166,7 +167,6 @@
   &:focus,
   &:focus-within,
   &:active {
-  //  box-sizing: border-box;
     border: 7px solid;
     border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
@@ -192,7 +192,8 @@
   @media (max-width: $mobile-width) {
     min-width: 290px;
     min-height: 384px;
-    padding: 55px 42px;
+    padding: 42px 34px 49px;
+    width: 100%;
   }
 }
 
@@ -207,7 +208,7 @@
   z-index: 1;
 
   @media (max-width: $mobile-width) {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 24px;
   }
 }
@@ -245,12 +246,16 @@
   @media (max-width: $mobile-width) {
     font-size: 48px;
     line-height: 72px;
-    margin: 81px 0 50px;
-    padding-right: 47px;
+    width: 190px;
+    margin: 54px auto 29px;
+    padding-right: 35px;
 
     &::after {
       width: 24px;
       height: 33px;
+      bottom: 20px;
+      right: 28px;
+      background-image: url("../img/svg/icon-rub-mobile.svg");
     }
   }
 }
@@ -292,5 +297,9 @@
   &:focus {
     color: $color-egyptian-blue;
     cursor: pointer;
+  }
+
+  @media (max-width: $mobile-width) {
+    width: 100%;
   }
 }

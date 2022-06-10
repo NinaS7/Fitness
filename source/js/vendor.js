@@ -3,15 +3,28 @@
 
 import Swiper, {Navigation} from 'swiper';
 
-const swiper = new Swiper('.coaches__wrapper', {
+const swiperReviews = new Swiper('.reviews__wrapper', {
+  spaceBetween: 40,
+  //  slidesPerView: 1,
+  autoHeight: true,
+  direction: 'horizontal',
+  loop: false,
+  modules: [Navigation],
+  navigation: {
+    nextEl: '.reviews__button--next.swiper-button-next',
+    prevEl: '.reviews__button--previous.swiper-button-prev',
+  },
+});
+
+const swiperCoaches = new Swiper('.coaches__wrapper', {
   spaceBetween: 0,
-  slidesPerView: 1,
+  //  slidesPerView: 1,
   direction: 'horizontal',
   loop: true,
   modules: [Navigation],
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.coaches__button--next.swiper-button-next',
+    prevEl: '.coaches__button--previous.swiper-button-prev',
   },
   breakpoints: {
 
@@ -35,17 +48,5 @@ const swiper = new Swiper('.coaches__wrapper', {
   },
 });
 
-const swiperReviews = new Swiper('.reviews__wrapper', {
-  spaceBetween: 40,
-  slidesPerView: 1,
-  autoHeight: true,
-  direction: 'horizontal',
-  loop: false,
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-});
-
-swiper.init();
 swiperReviews.init();
+swiperCoaches.init();

@@ -7,21 +7,42 @@
   list-style: none;
 
   @media (max-width: $tablet-width) {
-    gap: 20px;
+    grid-template-columns: 22px 22px 22px;
+    gap: 16px;
   }
 
   @media (max-width: $mobile-width) {
-    gap: 35px; //
+    gap: 32px;
+    grid-template-columns: 32px 32px 25px;
   }
 }
 
-.social a {
+.social__link {
   &:hover,
   &:focus {
     opacity: 0.5;
   }
 }
 
-.social__link--facebook a {
+.social svg {
+  @media (max-width: $mobile-width) {
+    width: 31px;
+    height: 25px;
+  }
+}
+
+.social__link--facebook {
   padding-left: 11px;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 9px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding: 0;
+
+    svg {
+      padding-right: 15px;
+    }
+  }
 }

@@ -34,12 +34,13 @@
   @media (max-width: $tablet-width) {
     font-size: 42px;
     line-height: 42px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   @media (max-width: $mobile-width) {
     font-size: 32px;
     line-height: 32px;
+    margin-bottom: 31px;
   }
 }
 
@@ -65,7 +66,7 @@
 
   @media (max-width: $mobile-width) {
     flex-direction: column;
-    margin-bottom: 40px;
+    margin-bottom: 13px;
   }
 }
 
@@ -99,12 +100,13 @@
     }
   }
 
-  @media (max-width: $mobile-width) {
+  @media (max-width: $tablet-width) {
     width: 206px;
   }
 
   @media (max-width: $mobile-width) {
     width: 100%;
+    margin-bottom: 27px;
   }
 }
 
@@ -121,4 +123,10 @@
   line-height: 16px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
+
+  &:hover,
+  &:focus {
+    background-color: $color-default-white;
+    color: $color-sapphire;
+  }
 }

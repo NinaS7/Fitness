@@ -6,10 +6,10 @@
 
   @media (max-width: $mobile-width) {
     padding: 0;
-    //  flex-direction:column;
+    margin: 0;
+    display: block;
     column-count: 2;
-    margin-bottom: 40px;
-    justify-content: flex-end;
+    margin-bottom: 21px;
   }
 }
 
@@ -18,6 +18,15 @@
 
   @media (max-width: $tablet-width) {
     margin-right: 30px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 15px;
+    display: block;
+
+    &:first-child {
+      margin-top: 40px;
+    }
   }
 }
 
@@ -32,11 +41,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
-
-    &:first-child {
-      grid-row-start: 2;
-    }
   }
 }

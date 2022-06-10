@@ -23,7 +23,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    padding: 50px 0;
+    padding: 46px 0;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -33,9 +33,14 @@
 .footer__logo {
   align-self: center;
 
+  @media (max-width: $tablet-width) {
+    align-self: start;
+    padding-top: 2px;
+  }
+
   @media (max-width: $mobile-width) {
     position: absolute;
-    top: 50px;
+    top: 48px;
   }
 }
 
@@ -43,8 +48,21 @@
   padding-bottom: 6px;
   padding-left: 62px;
   align-self: center;
+
+  @media (max-width: $tablet-width) {
+    padding-left: 53px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-left: 0;
+    align-self: start;
+  }
 }
 
 .footer__social {
   align-self: center;
+
+  @media (max-width: $mobile-width) {
+    align-self: start;
+  }
 }

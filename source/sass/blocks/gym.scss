@@ -35,7 +35,7 @@
   padding: 46px 60px 46px 60px;
 
   @media (max-width: $tablet-width) {
-    padding: 2px 60px 35px 57px;;
+    padding: 2px 60px 35px 57px;
     text-align: center;
   }
 
@@ -97,6 +97,10 @@
 
   @media (max-width: $tablet-width) {
     padding: 0;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-right: 24px;
   }
 }
 
@@ -254,7 +258,6 @@
   }
 
   @media (max-width: $mobile-width) {
-  //  bottom: 35%;
-  //  left: 42%;
+    left: 42%;
   }
 }

@@ -1636,7 +1636,8 @@ button,
 
 .promo a:hover,
 .promo a:focus {
-  opacity: 0.7;
+  background-color: #ffffff;
+  color: #ed0233;
 }
 
 .promo img {
@@ -1644,42 +1645,6 @@ button,
   width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
-}
-
-.toggle {
-  width: 16px;
-  height: 32px;
-  margin-top: auto;
-  margin-bottom: auto;
-  border: none;
-  background-color: transparent;
-  padding: 0;
-  cursor: pointer;
-  position: absolute;
-  /*
-  &--previous {
-    // margin-right: 24px;
-    left: -55px;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  &--next {
-    margin-left: 24px;
-  }
-/*
-  @media (max-width: $mobile-width) {
-    width: 10px;
-    height: 19px;
-
-    &--previous {
-      margin-right: 22px;
-    }
-
-    &--next {
-      margin-left: 22px;
-    }
-  } */
 }
 
 .coaches {
@@ -1697,6 +1662,10 @@ button,
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 52px;
+}
+
+.coaches__slider {
+  position: relative;
 }
 
 .coaches__wrapper {
@@ -1741,11 +1710,11 @@ button,
   -webkit-transform: translate(-50%);
   -ms-transform: translate(-50%);
   transform: translate(-50%);
-  bottom: 30px;
-  z-index: -1;
+  bottom: 22px;
+  z-index: 2;
   margin: 0;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   line-height: 27px;
   color: #ffffff;
   width: 172px;
@@ -1758,7 +1727,6 @@ button,
   -o-object-fit: cover;
   object-fit: cover;
   position: absolute;
-  z-index: -1;
   top: 0;
   left: 0;
   background-color: #787878;
@@ -1770,6 +1738,8 @@ button,
   height: 100%;
   padding: 52px 42px 58px 56px;
   background-color: rgba(16, 38, 84, 0.89);
+  position: absolute;
+  z-index: 3;
 }
 
 .coaches__info p {
@@ -1803,6 +1773,25 @@ button,
   line-height: 21px;
   color: #ffffff;
   margin-bottom: 13px;
+}
+
+.coaches__button {
+  width: 16px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 132px;
+}
+
+.coaches__button--previous {
+  left: -57px;
+}
+
+.coaches__button--next {
+  right: -55px;
 }
 
 .advantages {
@@ -1900,7 +1889,7 @@ button,
 }
 
 .advantages__text {
-  margin-left: 27px;
+  margin-left: 29px;
   min-width: 235px;
 }
 
@@ -1938,7 +1927,7 @@ button,
 .advantages__center h3 {
   font-weight: 700;
   font-size: 26px;
-  line-height: 37px;
+  line-height: 35px;
   letter-spacing: -0.08em;
   margin: 0;
   padding: 0;
@@ -2078,6 +2067,11 @@ button,
   border-bottom: 1px solid #1c3374;
 }
 
+.sale__list a:hover,
+.sale__list a:focus {
+  opacity: 0.7;
+}
+
 .reviews {
   margin-bottom: 120px;
 }
@@ -2092,12 +2086,16 @@ button,
   text-align: center;
 }
 
+.reviews__slider {
+  position: relative;
+}
+
 .reviews__wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin: 0 300px;
+  margin: 0 26%;
   height: 242px;
 }
 
@@ -2115,20 +2113,20 @@ button,
   width: 560px;
   height: 242px;
   background-color: #1c3374;
-  -webkit-box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
-  box-shadow: 0px 0px 40px rgba(28, 51, 116, 0.2);
+  -webkit-box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
+  box-shadow: 0 0 40px rgba(28, 51, 116, 0.2);
   color: #ffffff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 62px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 80px 1fr;
+  grid-template-columns: 80px 1fr;
+  gap: 28px;
+  padding: 61px;
 }
 
 .reviews img {
-  max-width: 80px;
-  max-height: 80px;
-  -o-object-fit: cover;
-  object-fit: cover;
+  width: 80px;
+  height: 80px;
   margin-right: 28px;
 }
 
@@ -2141,9 +2139,32 @@ button,
   letter-spacing: -0.06em;
 }
 
+.reviews h3 br {
+  display: none;
+}
+
 .reviews p {
   font-size: 14px;
   line-height: 22px;
+}
+
+.reviews__button {
+  width: 16px;
+  height: 32px;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  cursor: pointer;
+  position: absolute;
+  bottom: 106px;
+}
+
+.reviews__button--previous {
+  left: 21%;
+}
+
+.reviews__button--next {
+  right: 21%;
 }
 
 .feedback {
@@ -2274,6 +2295,12 @@ button,
   text-transform: uppercase;
 }
 
+.form button:hover,
+.form button:focus {
+  background-color: #ffffff;
+  color: #102654;
+}
+
 .contacts {
   border-top: 1px solid #74819c;
 }
@@ -2321,6 +2348,7 @@ button,
   list-style: none;
   padding: 0;
   margin: 0;
+  padding-right: 3px;
 }
 
 .contacts__info li {
@@ -2348,6 +2376,11 @@ button,
 
 .contacts__info a {
   font-size: 12px;
+}
+
+.contacts__info a:hover,
+.contacts__info a:focus {
+  opacity: 0.7;
 }
 
 .contacts__mail {
@@ -2427,12 +2460,12 @@ button,
   list-style: none;
 }
 
-.social a:hover,
-.social a:focus {
+.social__link:hover,
+.social__link:focus {
   opacity: 0.5;
 }
 
-.social__link--facebook a {
+.social__link--facebook {
   padding-left: 11px;
 }
 
@@ -2679,7 +2712,7 @@ button,
   .promo__title h2 {
     font-size: 52px;
     line-height: 52px;
-    width: 146px;
+    min-width: 145px;
   }
 
   .promo__inner {
@@ -2715,6 +2748,7 @@ button,
 
   .promo__time .promo__number {
     padding: 0;
+    padding-top: 1px;
   }
 
   .promo__text {
@@ -2762,20 +2796,36 @@ button,
     margin-right: 30px;
   }
 
+  .coaches h3 {
+    bottom: 21px;
+    left: 51%;
+  }
+
+  .coaches__info {
+    padding: 54px 49px 54px 56px;
+  }
+
+  .coaches__info span {
+    font-size: 14px;
+    line-height: 19px;
+    padding-right: 17px;
+    margin-bottom: 35px;
+  }
+
   .advantages {
-    padding: 100px 0 81px;
+    padding: 100px 0 94px;
     margin-bottom: 100px;
   }
 
   .advantages h2 {
     font-size: 42px;
     line-height: 42px;
-    margin-bottom: 43px;
+    margin-bottom: 42px;
   }
 
   .advantages__wrapper {
     margin: 0;
-    min-height: 488px;
+    min-height: 477px;
   }
 
   .advantages__wrapper::before,
@@ -2798,6 +2848,7 @@ button,
 
   .advantages__number span {
     padding: 0;
+    line-height: 19px;
   }
 
   .advantages__text h3 {
@@ -2818,7 +2869,7 @@ button,
   .advantages__center h3 {
     font-size: 22px;
     line-height: 33px;
-    margin-bottom: 15px;
+    margin-bottom: 8px;
   }
 
   .advantages__center span {
@@ -2854,8 +2905,12 @@ button,
     padding-bottom: 45px;
   }
 
+  .sale__year h3 {
+    margin-bottom: 17px;
+  }
+
   .sale__year p {
-    margin-bottom: 181px;
+    margin-bottom: 182px;
   }
 
   .sale img {
@@ -2869,6 +2924,14 @@ button,
     gap: 30px;
   }
 
+  .sale li {
+    padding: 24px 27px 28px;
+  }
+
+  .sale__list h3 {
+    margin-bottom: 11px;
+  }
+
   .sale__list p {
     margin-bottom: 41px;
   }
@@ -2880,13 +2943,13 @@ button,
   }
 
   .reviews {
-    margin-bottom: 100px;
+    margin-bottom: 101px;
   }
 
   .reviews h2 {
     font-size: 42px;
     line-height: 42px;
-    margin-bottom: 41px;
+    margin-bottom: 39px;
   }
 
   .reviews__wrapper {
@@ -2898,8 +2961,25 @@ button,
   }
 
   .reviews__item {
-    padding: 62px 65px 42px;
+    padding: 60px 65px 42px;
     width: 566px;
+  }
+
+  .reviews img {
+    margin-right: 27px;
+    padding-top: 2px;
+  }
+
+  .reviews h3 {
+    margin-top: 2px;
+  }
+
+  .reviews__button--previous {
+    left: 0;
+  }
+
+  .reviews__button--next {
+    right: 0;
   }
 
   .feedback {
@@ -2916,16 +2996,20 @@ button,
   .form h2 {
     font-size: 42px;
     line-height: 42px;
-    margin-bottom: 28px;
+    margin-bottom: 26px;
   }
 
   .form form {
     max-width: 472px;
   }
 
+  .form input {
+    width: 206px;
+  }
+
   .contacts__container {
     max-width: 768px;
-    padding: 67px 175px 70px 133px;
+    padding: 67px 175px 45px 133px;
     margin: 0 auto;
   }
 
@@ -2936,7 +3020,7 @@ button,
   }
 
   .contacts__info {
-    margin-right: 0;
+    margin: 0;
   }
 
   .contacts__info::before {
@@ -2944,13 +3028,24 @@ button,
   }
 
   .contacts__info h3 {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 30px;
+    letter-spacing: -0.05em;
+    margin-bottom: 7px;
   }
 
   .contacts__info p {
     font-size: 18px;
     line-height: 27px;
+    letter-spacing: -0.05em;
+  }
+
+  .contacts__info a {
+    font-size: 16px;
+  }
+
+  .contacts__mail {
+    padding-top: 2px;
   }
 
   .footer {
@@ -2961,12 +3056,29 @@ button,
     padding: 45px 0;
   }
 
+  .footer__logo {
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+    padding-top: 2px;
+  }
+
+  .footer__nav {
+    padding-left: 53px;
+  }
+
   .nav li {
     margin-right: 30px;
   }
 
   .social {
-    gap: 20px;
+    -ms-grid-columns: 22px 22px 22px;
+    grid-template-columns: 22px 22px 22px;
+    gap: 16px;
+  }
+
+  .social__link--facebook {
+    padding-left: 9px;
   }
 }
 
@@ -3075,6 +3187,10 @@ button,
     letter-spacing: -0.03em;
   }
 
+  .gym__info p {
+    padding-right: 24px;
+  }
+
   .gym__images {
     margin: 0;
     min-width: 320px;
@@ -3102,8 +3218,12 @@ button,
     margin-top: 40px;
   }
 
+  .gym a {
+    left: 42%;
+  }
+
   .subscriptions {
-    margin-bottom: 70px;
+    margin-bottom: 68px;
   }
 
   .subscriptions::after {
@@ -3117,7 +3237,7 @@ button,
   .subscriptions h2 {
     font-size: 32px;
     line-height: 32px;
-    margin-bottom: 35px;
+    margin-bottom: 23px;
   }
 
   .subscriptions__time {
@@ -3129,6 +3249,7 @@ button,
   .subscriptions__button {
     font-size: 16px;
     line-height: 24px;
+    padding-bottom: 8px;
   }
 
   .subscriptions__tab {
@@ -3138,29 +3259,38 @@ button,
   .subscriptions__tab li {
     min-width: 290px;
     min-height: 384px;
-    padding: 55px 42px;
+    padding: 42px 34px 49px;
+    width: 100%;
   }
 
   .subscriptions__tab h3 {
-    font-size: 22px;
+    font-size: 21px;
     line-height: 24px;
   }
 
   .subscriptions__price {
     font-size: 48px;
     line-height: 72px;
-    margin: 81px 0 50px;
-    padding-right: 47px;
+    width: 190px;
+    margin: 54px auto 29px;
+    padding-right: 35px;
   }
 
   .subscriptions__price::after {
     width: 24px;
     height: 33px;
+    bottom: 20px;
+    right: 28px;
+    background-image: url("../img/svg/icon-rub-mobile.svg");
   }
 
   .subscriptions__price-back {
     font-size: 80px;
     line-height: 120px;
+  }
+
+  .subscriptions__tab a {
+    width: 100%;
   }
 
   .promo {
@@ -3175,7 +3305,7 @@ button,
   }
 
   .promo__info {
-    padding: 51px 44px;
+    padding: 47px 43px 50px;
   }
 
   .promo__data {
@@ -3198,15 +3328,14 @@ button,
 
   .coaches {
     margin-bottom: 70px;
-    padding: 0 15px;
+    padding: 0 47px;
     max-width: 320px;
   }
 
   .coaches h2 {
     font-size: 32px;
     line-height: 32px;
-    margin-left: 58px;
-    margin-bottom: 50px;
+    margin-bottom: 42px;
   }
 
   .coaches__card {
@@ -3216,15 +3345,41 @@ button,
   }
 
   .coaches__info {
-    padding: 58px 54px 58px 55px;
+    padding: 44px 24px 40px 39px;
   }
 
-  .coaches__info {
-    padding: 48px 33px 48px 34px;
+  .coaches__info p {
+    line-height: 22px;
+  }
+
+  .coaches__info span {
+    padding-right: 18px;
+    letter-spacing: -0.06em;
+  }
+
+  .coaches__info ul {
+    padding-left: 9px;
+  }
+
+  .coaches__button {
+    bottom: 118px;
+  }
+
+  .coaches__button--previous {
+    left: -37px;
+  }
+
+  .coaches__button--next {
+    right: -33px;
+  }
+
+  .coaches__button svg {
+    width: 20px;
+    height: 20px;
   }
 
   .advantages {
-    padding: 70px 0;
+    padding: 70px 0 20px;
     margin-bottom: 70px;
   }
 
@@ -3235,11 +3390,7 @@ button,
   .advantages h2 {
     font-size: 32px;
     line-height: 32px;
-    margin-bottom: 60px;
-  }
-
-  .advantages__wrapper {
-    min-height: 1231px;
+    margin-bottom: 44px;
   }
 
   .advantages ul {
@@ -3247,7 +3398,8 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    padding: 0 47px;
+    padding: 0 41px;
+    margin-bottom: 10px;
   }
 
   .advantages li {
@@ -3259,8 +3411,12 @@ button,
     text-align: center;
   }
 
+  .advantages__last {
+    padding: 0;
+  }
+
   .advantages__number {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
   }
 
   .advantages__text {
@@ -3268,7 +3424,7 @@ button,
   }
 
   .advantages__text p {
-    margin-bottom: 50px;
+    margin-bottom: 34px;
   }
 
   .advantages__center {
@@ -3276,10 +3432,19 @@ button,
     min-width: 320px;
     width: 100%;
     height: 239px;
-    padding: 50px 74px;
+    padding: 44px 74px;
     -webkit-transform: translateX(0);
     -ms-transform: translateX(0);
     transform: translateX(0);
+    margin-bottom: 42px;
+  }
+
+  .advantages__center span {
+    margin: 0;
+  }
+
+  .advantages__center p {
+    margin: 0;
   }
 
   .sale {
@@ -3301,17 +3466,24 @@ button,
     text-align: center;
   }
 
+  .sale__year h3 {
+    margin-bottom: 0;
+  }
+
   .sale__year span {
-    margin-bottom: 30px;
+    margin-bottom: 13px;
   }
 
   .sale__year p {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 
   .sale img {
     min-width: 290px;
     min-height: 299px;
+    width: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .sale ul {
@@ -3320,7 +3492,26 @@ button,
   }
 
   .sale li {
-    padding: 46px 50px;
+    padding: 36px 41px;
+    text-align: center;
+  }
+
+  .sale__list h3 {
+    margin-bottom: 12px;
+  }
+
+  .sale__list p {
+    margin-bottom: 19px;
+  }
+
+  .sale__list a {
+    padding-bottom: 0;
+  }
+
+  .sale__link {
+    padding-top: 8px;
+    display: inline-block;
+    vertical-align: middle;
   }
 
   .reviews {
@@ -3330,6 +3521,7 @@ button,
   .reviews h2 {
     font-size: 32px;
     line-height: 32px;
+    margin-bottom: 43px;
   }
 
   .reviews__wrapper {
@@ -3343,18 +3535,21 @@ button,
   }
 
   .reviews__item {
-    min-width: 226px;
-    width: 100%;
+    width: 226px;
     height: 335px;
-    padding: 40px 25px;
+    padding: 47px 23px;
     position: relative;
+    -ms-grid-columns: 1fr;
+    grid-template-columns: 1fr;
+    gap: 0;
   }
 
   .reviews img {
     position: absolute;
     width: 68px;
     height: 68px;
-    top: 25px;
+    top: 40px;
+    left: 40px;
     display: block;
   }
 
@@ -3362,10 +3557,33 @@ button,
     font-size: 20px;
     line-height: 26px;
     padding-left: 100px;
+    letter-spacing: -0.11em;
+    margin-bottom: 23px;
+  }
+
+  .reviews h3 br {
+    display: block;
   }
 
   .reviews p {
     text-align: center;
+  }
+
+  .reviews__button {
+    bottom: 149px;
+  }
+
+  .reviews__button--previous {
+    left: -2%;
+  }
+
+  .reviews__button--next {
+    right: 0;
+  }
+
+  .reviews__button svg {
+    width: 20px;
+    height: 20px;
   }
 
   .form__container {
@@ -3377,6 +3595,7 @@ button,
   .form h2 {
     font-size: 32px;
     line-height: 32px;
+    margin-bottom: 31px;
   }
 
   .form form {
@@ -3390,15 +3609,12 @@ button,
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column;
-    margin-bottom: 40px;
-  }
-
-  .form input {
-    width: 206px;
+    margin-bottom: 13px;
   }
 
   .form input {
     width: 100%;
+    margin-bottom: 27px;
   }
 
   .contacts {
@@ -3413,6 +3629,15 @@ button,
   .contacts h2 {
     font-size: 32px;
     line-height: 32px;
+    margin-bottom: 33px;
+  }
+
+  .contacts__info {
+    margin-bottom: 3px;
+  }
+
+  .contacts__mail {
+    padding-top: 6px;
   }
 
   .footer {
@@ -3420,7 +3645,7 @@ button,
   }
 
   .footer__wrapper {
-    padding: 50px 0;
+    padding: 46px 0;
     position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -3433,32 +3658,63 @@ button,
 
   .footer__logo {
     position: absolute;
-    top: 50px;
+    top: 48px;
+  }
+
+  .footer__nav {
+    padding-left: 0;
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
+  }
+
+  .footer__social {
+    -ms-flex-item-align: start;
+    -ms-grid-row-align: start;
+    align-self: start;
   }
 
   .nav {
     padding: 0;
+    margin: 0;
+    display: block;
     -webkit-column-count: 2;
     -moz-column-count: 2;
     column-count: 2;
-    margin-bottom: 40px;
-    -webkit-box-pack: end;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    margin-bottom: 21px;
+  }
+
+  .nav li {
+    margin-bottom: 15px;
+    display: block;
+  }
+
+  .nav li:first-child {
+    margin-top: 40px;
   }
 
   .nav a {
-    font-size: 16px;
+    font-size: 14px;
     line-height: 19px;
   }
 
-  .nav a:first-child {
-    -ms-grid-row: 2;
-    grid-row-start: 2;
+  .social {
+    gap: 32px;
+    -ms-grid-columns: 32px 32px 25px;
+    grid-template-columns: 32px 32px 25px;
   }
 
-  .social {
-    gap: 35px;
+  .social svg {
+    width: 31px;
+    height: 25px;
+  }
+
+  .social__link--facebook {
+    padding: 0;
+  }
+
+  .social__link--facebook svg {
+    padding-right: 15px;
   }
 }
 

@@ -78,6 +78,14 @@
   letter-spacing: -0.09em;
   margin: 0;
   margin-bottom: 19px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 17px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 0;
+  }
 }
 
 .sale__year span {
@@ -88,7 +96,7 @@
   letter-spacing: -0.07em;
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 30px;
+    margin-bottom: 13px;
   }
 }
 
@@ -99,11 +107,11 @@
   margin-bottom: 181px;
 
   @media (max-width: $tablet-width) {
-    margin-bottom: 181px;
+    margin-bottom: 182px;
   }
 
   @media (max-width: $mobile-width) {
-    margin-bottom: 40px;
+    margin-bottom: 24px;
   }
 }
 
@@ -133,6 +141,8 @@
   @media (max-width: $mobile-width) {
     min-width: 290px;
     min-height: 299px;
+    width: 100%;
+    object-fit: cover;
   }
 }
 
@@ -161,8 +171,13 @@
   padding: 26px 27px;
   color: $color-resolution-blue;
 
+  @media (max-width: $tablet-width) {
+    padding: 24px 27px 28px;
+  }
+
   @media (max-width: $mobile-width) {
-    padding: 46px 50px;
+    padding: 36px 41px;
+    text-align: center;
   }
 }
 
@@ -173,6 +188,14 @@
   line-height: 25px;
   letter-spacing: -0.04em;
   margin-bottom: 9px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 11px;
+  }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 12px;
+  }
 }
 
 .sale__list p {
@@ -185,6 +208,10 @@
   @media (max-width: $tablet-width) {
     margin-bottom: 41px;
   }
+
+  @media (max-width: $mobile-width) {
+    margin-bottom: 19px;
+  }
 }
 
 .sale__list a {
@@ -194,6 +221,15 @@
   text-transform: uppercase;
   padding-bottom: 3px;
   border-bottom: 1px solid $color-resolution-blue;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-bottom: 0;
+  }
 }
 
 .sale__link {
@@ -201,5 +237,11 @@
     padding-top: 28px;
     display: block;
     width: 68px;
+  }
+
+  @media (max-width: $mobile-width) {
+    padding-top: 8px;
+    display: inline-block;
+    vertical-align: middle;
   }
 }
