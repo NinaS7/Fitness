@@ -171,6 +171,7 @@
     border: 7px solid;
     border-image-source: linear-gradient(148.82deg, #d10a42 0.85%, #00359f 100%);
     border-image-slice: 1;
+    position: relative;
 
     a {
       border: 0;
@@ -178,6 +179,7 @@
       color: $color-default-white;
       padding: 26px 10px;
       cursor: pointer;
+      position: absolute;
     }
   }
 
