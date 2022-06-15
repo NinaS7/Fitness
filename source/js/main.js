@@ -5,6 +5,7 @@ import {onTabs} from './modules/tabs';
 
 const subscriptions = document.querySelector('.subscriptions__wrapper');
 const anchors = document.querySelectorAll('.scroll-to');
+const videoBtn = document.querySelector('[data-video-button]');
 
 window.addEventListener('DOMContentLoaded', () => {
 
@@ -32,6 +33,14 @@ window.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+
+  videoBtn.onclick = function (evt) {
+    evt.preventDefault();
+    this.style.display = 'none';
+    const div = document.querySelector('div.gym__video');
+    div.style.display = 'block';
+    div.querySelector('iframe').src = 'https://www.youtube.com/embed/9TZXsZItgdw?controls=0';
+  };
 
   // все скрипты должны быть в обработчике 'DOMContentLoaded', но не все в 'load'
   // в load следует добавить скрипты, не участвующие в работе первого экрана

@@ -121,7 +121,7 @@
   font-size: 18px;
   line-height: 16px;
   margin-bottom: 19px;
-  letter-spacing: -0.06em;
+  letter-spacing: 0.06em;
 
   br {
     display: none;
@@ -135,7 +135,7 @@
     font-size: 20px;
     line-height: 26px;
     padding-left: 100px;
-    letter-spacing: -0.11em;
+    letter-spacing: 0;
     margin-bottom: 23px;
 
     br {
@@ -147,6 +147,7 @@
 .reviews p {
   font-size: 14px;
   line-height: 22px;
+  letter-spacing: 0.07em;
 
   @media (max-width: $mobile-width) {
     text-align: center;

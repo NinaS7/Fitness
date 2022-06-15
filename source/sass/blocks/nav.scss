@@ -32,12 +32,12 @@
 
 .nav__only {
   @media (max-width: $mobile-width) {
-    margin-left: 20px;
+    margin-left: 19px;
   }
 }
 
 .nav a {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 16px;
   color: $color-default-white;
 
@@ -47,7 +47,7 @@
   }
 
   @media (max-width: $mobile-width) {
-    font-size: 14px;
+    font-size: 16px;
     line-height: 19px;
   }
 }

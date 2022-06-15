@@ -1,6 +1,6 @@
 .advantages {
   background-color: $color-ghost-white;
-  padding: 119px 0 107px;
+  padding: 119px 0 113px;
   margin-bottom: 120px;
 
   @media (max-width: $tablet-width) {
@@ -27,7 +27,7 @@
   letter-spacing: 0.03em;
   text-align: center;
   margin: 0;
-  margin-bottom: 70px;
+  margin-bottom: 65px;
 
   @media (max-width: $tablet-width) {
     font-size: 42px;
@@ -56,7 +56,7 @@
     background-color: rgba(209, 10, 66, 0.2);
     width: 340px;
     height: 2px;
-    top: 48%;
+    top: 50%;
   }
 
   &::after {
@@ -64,7 +64,7 @@
     position: absolute;
     width: 340px;
     height: 2px;
-    top: 48%;
+    top: 50%;
     right: 0;
     background-color: rgba(209, 10, 66, 0.2);
   }
@@ -129,6 +129,7 @@
   font-weight: 700;
   font-size: 67px;
   line-height: 52px;
+  letter-spacing: 0.05em;
   background: linear-gradient(127.61deg, #d10a42 0%, #0041ca 45.58%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -158,7 +159,8 @@
 }
 
 .advantages__text {
-  margin-left: 29px;
+  margin-left: 32px;
+  margin-top: 3px;
   min-width: 235px;
 
   @media (max-width: $mobile-width) {
@@ -169,10 +171,9 @@
 .advantages__text h3 {
   margin: 0;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
   line-height: 21px;
   margin-bottom: 11px;
-  letter-spacing: -0.05em;
 
   @media (max-width: $tablet-width) {
     font-size: 20px;
@@ -180,12 +181,16 @@
     margin-bottom: 2px;
     letter-spacing: -0.1em;
   }
+
+  @media (max-width: $mobile-width) {
+    letter-spacing: 0;
+  }
 }
 
 .advantages__text p {
   margin: 0;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 22px;
 
   @media (max-width: $mobile-width) {
@@ -197,13 +202,13 @@
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  top: 0;
+  top: 5px;
   width: 240px;
   height: 307px;
   background-color: $color-resolution-blue;
   color: $color-default-white;
   text-align: center;
-  padding: 50px 34px;
+  padding: 46px 34px 50px;
 
   @media (max-width: $tablet-width) {
     width: 442px;
@@ -228,10 +233,9 @@
   font-weight: 700;
   font-size: 26px;
   line-height: 35px;
-  letter-spacing: -0.08em;
   margin: 0;
   padding: 0;
-  margin-bottom: 31px;
+  margin-bottom: 35px;
 
   @media (max-width: $tablet-width) {
     font-size: 22px;
@@ -258,7 +262,7 @@
 }
 
 .advantages__center p {
-  font-size: 14px;
+  font-size: 16px;
 
   @media (max-width: $mobile-width) {
     margin: 0;

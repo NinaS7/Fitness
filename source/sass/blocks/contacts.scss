@@ -70,12 +70,16 @@
     margin: 0;
 
     &::before {
-      display: none;
+      height: 130px;
     }
   }
 
   @media (max-width: $mobile-width) {
     margin-bottom: 3px;
+
+    &::before {
+      display: none;
+    }
   }
 }
 
@@ -92,15 +96,15 @@
 
 .contacts__info h3 {
   font-weight: 700;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 24px;
   margin: 0;
   margin-bottom: 3px;
 
   @media (max-width: $tablet-width) {
-    font-size: 18px;
+    font-size: 19px;
     line-height: 30px;
-    letter-spacing: -0.05em;
+    letter-spacing: 0.05em;
     margin-bottom: 7px;
   }
 }
@@ -113,17 +117,17 @@
   margin: 0;
   font-size: 13px;
   line-height: 21px;
-  letter-spacing: -0.02em;
+  letter-spacing: 0.05em;
 
   @media (max-width: $tablet-width) {
     font-size: 18px;
     line-height: 27px;
-    letter-spacing: -0.05em;
+    letter-spacing: 0.01em;
   }
 }
 
 .contacts__info a {
-  font-size: 12px;
+  font-size: 14px;
   user-select: none;
 
   &:hover,
@@ -132,7 +136,7 @@
   }
 
   @media (max-width: $tablet-width) {
-    font-size: 16px;
+    font-size: 18px;
   }
 }
 

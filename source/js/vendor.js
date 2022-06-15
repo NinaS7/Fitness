@@ -21,6 +21,8 @@ const swiperCoaches = new Swiper('.coaches__wrapper', {
   slidesPerView: 1,
   direction: 'horizontal',
   loop: true,
+  loopAdditionalSlides: 0,
+  loopedSlides: 0,
   modules: [Navigation],
   navigation: {
     nextEl: '.coaches__button--next.swiper-button-next',
@@ -43,7 +45,7 @@ const swiperCoaches = new Swiper('.coaches__wrapper', {
     1200: {
       spaceBetween: 40,
       slidesPerView: 4,
-      initialSlide: 4,
+      initialSlide: 0,
     },
   },
 });
