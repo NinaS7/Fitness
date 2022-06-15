@@ -146,11 +146,12 @@
 }
 
 .advantages__number span {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 30px;
   color: $color-persian-blue;
   display: block;
   padding-left: 3px;
+  letter-spacing: 0;
 
   @media (max-width: $tablet-width) {
     padding: 0;

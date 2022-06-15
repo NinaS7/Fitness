@@ -1934,11 +1934,12 @@ button,
 }
 
 .advantages__number span {
-  font-size: 13px;
+  font-size: 14px;
   line-height: 30px;
   color: #2e35ac;
   display: block;
   padding-left: 3px;
+  letter-spacing: 0;
 }
 
 .advantages__text {
